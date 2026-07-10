@@ -495,19 +495,19 @@ def main() -> None:
     parser.add_argument(
         "--protocol",
         choices=("udp", "tcp"),
-        default="udp",
+        default="tcp",
         help="Transport protocol to listen on (default: udp).",
     )
     parser.add_argument(
         "--host",
-        default="0.0.0.0",
-        help="Host/IP to bind to (default: 0.0.0.0 for UDP).",
+        default="127.0.0.1",
+        help="Host/IP to bind to (default: 127.0.0.1 for TCP).",
     )
     parser.add_argument(
         "--port",
         type=int,
-        default=9000,
-        help="Port to listen on (default: 9000 for UDP).",
+        default=8000,
+        help="Port to listen on (default: 8000 for UDP).",
     )
     parser.add_argument(
         "--left-only",

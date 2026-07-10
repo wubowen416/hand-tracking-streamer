@@ -69,6 +69,20 @@ HTS can stream data via **wired** TCP using ADB. Connect your Quest to your mach
 
 - Default target: `localhost:8000` via ADB reverse loopback.
 
+### Requirements
+
+ADB. Install via the following command in powershell (Windows): `winget install Google.PlatformTools`.
+
+### Usage
+
+```bash
+# Forward
+adb reverse tcp:8000 tcp:8000
+
+# Check
+adb reverse --list
+```
+
 >[!NOTE]
 > TCP streaming over USB generally provides the most consistent and reliable performance. In practice, HTS over TCP tops out at around 70 Hz Quest hand tracking frequency.
 
